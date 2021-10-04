@@ -7,9 +7,14 @@ index:
   banner_img_height: 100
   banner_mask_alpha: 0.3
   grid_text: Hi,Xianghe!
-  subtitle: You got to put the past behind you before you can move on. 
+  subtitle: You got to put the past behind you before you can move on.
+  social_icon:
+    - {class: "github", links: "https://github.com/XiangHeProject", tip: "GitHub"}
+    - {class: "bilibili", links: "https://www.bilibili.com", tip: "BiliBili"}
+    - {class: "zhihu", links: "https://www.zhihu.com", tip: "zhihu"}
+    
 
 footer:
   content: '
-    “风荡，花自漾”
+    “人不能一个人活下去，不需要任何人的孤独和需要人但得不到的孤独是不一样的。”
   '

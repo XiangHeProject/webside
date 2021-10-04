@@ -8,7 +8,10 @@
     background-color:#eee
 }
 
-
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
 
 body{
     margin: 0;
@@ -255,6 +258,13 @@ a:active, a:hover {
     white-space: nowrap;
 }
 
+.focusinfo img {
+    width: 130px;
+    height: auto;
+    padding: 2px;
+    border-radius: 100%;
+}
+
 @-webkit-keyframes float {
     0% {
         -webkit-transform: translateY(0);
@@ -366,4 +376,41 @@ a:active, a:hover {
     background-repeat: no-repeat;
     animation: poi-deg 12s infinite linear;
     -webkit-animation: poi-deg 12s infinite linear;
+}
+
+.top-social_v2 {
+    height: 32px;
+    margin-bottom: -15px;
+    margin-left: 10px;
+    list-style: none;
+    display: inline-block;
+}
+
+.top-social_v2 li {
+    float: left;
+    margin-right: 13px;
+}
+
+.top-social_v2 img {
+    font-size: 24px;
+    height: 35px;
+    width: 35px;
+    padding: 6px;
+    background: 0 0;
+}
+
+.cd-top {
+    background: url(https://cdn.jsdelivr.net/gh/LIlGG/cdn@1.0.2/img/Sakura/images/scroll.png) no-repeat center;
+}
+
+.cd-top {
+    position: fixed;
+    right: 25px;
+    top: -900px;
+    z-index: 99;
+    width: 70px;
+    height: 900px;
+    background-size: contain;
+    transition: all .5s ease-in-out;
+    opacity: 1;
 }

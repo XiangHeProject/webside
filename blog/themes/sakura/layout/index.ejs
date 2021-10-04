@@ -10,6 +10,16 @@
                         <%- theme.index.subtitle %> 
                     <i class="fa fa-quote-right"></i>
                 </p>
+                <div class="top-social_v2">
+                    <% for(const each of theme.index.social_icon || []) { %> 
+                        <% if (!each.class) continue; %>
+                        <li>
+                            <a href="<%= each.links %>" title="<%= each.tip %> ">
+                                <img src="/img/sns/<%= each.class %>.png">
+                            </a>
+                        </li>
+                    <% } %> 
+                </div>
             </div>
         </div>
     </figure>
@@ -33,6 +43,5 @@
         <br />
 
         <a href="/<%- post.path %>"><%- post.title %></a>
-
     <% }); %>
 </div>
