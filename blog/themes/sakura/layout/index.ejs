@@ -5,8 +5,9 @@
                 <%- theme.index.grid_text %>
             </h1>
             <div class="header-info">
-                <p><i class="fa fa-quote-left"></i> 
-                    You got to put the past behind you before you can move on. 
+                <p>
+                    <i class="fa fa-quote-left"></i> 
+                        <%- theme.index.subtitle %> 
                     <i class="fa fa-quote-right"></i>
                 </p>
             </div>
@@ -17,19 +18,21 @@
     </div>
 </header>
 
-<% site.posts.forEach(function(post){ %>
+<div id="content">
+    <% site.posts.forEach(function(post){ %>
 
-    <%- post.path %>
-    <br />
-    <%- post.slug %>
-    <br />
-    <%- post._id %>
-    <br />
-    <%- post.title %>
-    <br />
-    <%- post.date %>
-    <br />
+        <%- post.path %>
+        <br />
+        <%- post.slug %>
+        <br />
+        <%- post._id %>
+        <br />
+        <%- post.title %>
+        <br />
+        <%- post.date %>
+        <br />
 
-    <a href="/<%- post.path %>"><%- post.title %></a>
+        <a href="/<%- post.path %>"><%- post.title %></a>
 
-<% }); %>
+    <% }); %>
+</div>

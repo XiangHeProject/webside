@@ -3,5 +3,5 @@ function headertop_down() {
     $('html,body').animate({
         scrollTop: coverOffset
     },
-    600);
+    800);
 }

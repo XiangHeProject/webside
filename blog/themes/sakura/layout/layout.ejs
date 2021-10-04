@@ -9,7 +9,7 @@ var banner_mask_alpha = page.banner_mask_alpha || theme.index.banner_mask_alpha
 <html lang="<%= config.language %>" >
 
 <%- partial('_partial/head') %> 
-<body>
+<body class="serif">
     <main>
         <% if(is_post() || page.layout === '404') { %>
             <%- body %>
@@ -18,4 +18,7 @@ var banner_mask_alpha = page.banner_mask_alpha || theme.index.banner_mask_alpha
         <% } %>
     </main>
 </body>
+
+<%- partial('_partial/footer') %>
+
 </html>
