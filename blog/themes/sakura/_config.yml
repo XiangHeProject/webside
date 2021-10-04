@@ -1,0 +1,9 @@
+favicon: /img/logo.png
+apple_touch_icon: /img/logo.png
+title_join_string: " | "
+
+index:
+  banner_img: /img/banner.png
+  banner_img_height: 100
+  banner_mask_alpha: 0.3
+  grid_text: Hi,Xianghe!

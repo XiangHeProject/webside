@@ -1,0 +1,32 @@
+<%
+var joinStr = theme.title_join_string
+var title = config.title
+if (page.title) {
+  title = [page.title, title].join(joinStr)
+}
+%>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="<%- url_for(theme.apple_touch_icon) %>">
+    <link rel="icon" type="image/png" href="<%- url_for(theme.favicon) %>">
+    <meta name="description" content="<%= config.description %>">
+    <meta name="author" content="<%= page.author || config.author %>">
+    <meta name="keywords" content="<%= config.keywords %>">
+    <title><%= title %></title>
+    <script type="text/javascript">
+		if (!!window.ActiveXObject || "ActiveXObject" in window) {
+			alert('请抛弃万恶的IE系列浏览器吧。');
+		}
+	</script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="noexist" onload="this.media='all'">
+     <script src="https://use.fontawesome.com/9132c83cc0.js"></script>
+     <script src="/js/main.js"></script>
+     <link rel="stylesheet" href="/css/main.css">
+</head>
