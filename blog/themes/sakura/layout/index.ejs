@@ -11,6 +11,9 @@
                     <i class="fa fa-quote-right"></i>
                 </p>
                 <div class="top-social_v2">
+                    <li id="bg-pre">
+                        <img class="flipx" src="//cdn.jsdelivr.net/gh/LIlGG/halo-theme-sakura@1.3.1/source/images/next-b.svg">
+                    </li>
                     <% for(const each of theme.index.social_icon || []) { %> 
                         <% if (!each.class) continue; %>
                         <li>
@@ -19,11 +22,14 @@
                             </a>
                         </li>
                     <% } %> 
+                    <li id="bg-next">
+                        <img src="//cdn.jsdelivr.net/gh/LIlGG/halo-theme-sakura@1.3.1/source/images/next-b.svg">
+                    </li>
                 </div>
             </div>
         </div>
     </figure>
-    <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <div class="headertop-down faa-float animated">
         <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
     </div>
 </header>
