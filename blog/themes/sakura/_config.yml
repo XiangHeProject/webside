@@ -1,6 +1,10 @@
 favicon: /img/logo.png
 apple_touch_icon: /img/logo.png
 title_join_string: " | "
+blog_logo: ''
+blog_title: "Tao"
+email_address: "2742400566@qq.com"
+nickname: "ZhiZhen"
 
 index:
   banner_img: /img/banner.png
@@ -13,9 +17,13 @@ index:
     - {class: "bilibili", links: "https://www.bilibili.com", tip: "BiliBili"}
     - {class: "zhihu", links: "https://www.zhihu.com", tip: "zhihu"}
     
-    
+nav:
+  top_search: true
 
 footer:
   content: '
     “人不能一个人活下去，不需要任何人的孤独和需要人但得不到的孤独是不一样的。”
   '
+
+static_prefix:
+  nprogress: https://cdn.jsdelivr.net/npm/nprogress@0.2.0/

@@ -10,6 +10,7 @@ var banner_mask_alpha = page.banner_mask_alpha || theme.index.banner_mask_alpha
 
 <%- partial('_partial/head') %> 
 <body class="serif">
+    <%- partial('_partial/nav') %> 
     <main>
         <% if(is_post() || page.layout === '404') { %>
             <%- body %>

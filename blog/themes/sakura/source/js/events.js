@@ -6,12 +6,12 @@ HTMLElement.prototype.wrap = function(wrapper) {
 
 Sakura.events = {
     headertop_down:function() {
-        var coverOffset = $('#content').offset().top,
-            htd = $('.headertop-down');
+        var htd = $('.headertop-down');
         if (htd.length === 0) {
             return;
         };
         htd.on("click", function(){
+            var coverOffset = $('#content').offset().top;
             $('html,body').animate({
                 scrollTop: coverOffset,
                 easing   : 'swing'
@@ -53,5 +53,36 @@ Sakura.events = {
               scroll_top_duration
             );
         });
-    }
+    },
+    // 导航栏
+    NH: function () {
+        var h1 = 0,
+          h2 = 50,
+          ss = $(document).scrollTop();
+        $(window).scroll(function () {
+          var s = $(document).scrollTop();
+          // 屏幕剩余的高度
+          var surplus =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+          // 当前位置小数
+          var coorY = s / surplus;
+          NProgress.set(coorY);
+          if (s == h1) {
+            $(".site-header").removeClass("yya");
+          }
+          if (s > h1) {
+            $(".site-header").addClass("yya");
+          }
+          if (s > h2) {
+            $(".site-header").addClass("gizle");
+            if (s > ss) {
+              $(".site-header").removeClass("sabit");
+            } else {
+              $(".site-header").addClass("sabit");
+            }
+            ss = s;
+          }
+        });
+      }
 }

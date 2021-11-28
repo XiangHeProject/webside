@@ -1,0 +1,26 @@
+<nav class="site-header <% if(is_home()) { %> is-homepage <% } %>" role="banner">
+    <div class="site-top">
+        <div class="site-branding">
+            <% if(theme.blog_logo && theme.blog_logo != '') {%>
+                <div class="site-title">
+                    <a href="/">
+                        <img src=<%- url_for(theme.blog_logo) %>>
+                    </a>
+                </div>
+            <% } else {%>
+                <h1 class="site-title"><a href="/"><%= theme.blog_title %></a></h1>
+            <% } %>   
+        </div>
+        <div class="header-user-avatar">
+            <img src=<%- gravatar(theme.email_address) %>  width="30" height="30">
+            <div class="header-user-menu">
+                <div class="herder-user-name">
+                    <div class="herder-user-name-u"><%= theme.nickname %></div>
+                </div>
+            </div>
+        </div>
+        <% if(theme.nav.top_search){%>
+            <div class="searchbox"><i class="fa fa-search iconsearch icon-search"></i></div>
+        <% } %> 
+    </div>
+</nav>

@@ -44,6 +44,11 @@ a:active, a:hover {
     color:orange
 }
 
+a {
+	background-color: transparent;
+	text-decoration: none;
+}
+
 #centerbg{
     width: 100%;
     margin: 0;
@@ -436,4 +441,407 @@ a:active, a:hover {
 .flipx {
 	transform: scaleX(-1);
 	filter: FlipH
+}
+
+.site-header {
+	width: 100%;
+	height: 75px;
+	background: 0 0;
+	transition: all .4s ease;
+	position: fixed;
+	z-index: 9999;
+	top: 0
+}
+
+.site-header:hover {
+	background-color: #fff
+}
+
+.site-header.is-homepage .lower-cantiner {
+	display: none
+}
+
+.site-header.is-homepage.yya .lower-cantiner {
+	display: block
+}
+
+.site-header:hover.is-homepage .lower-cantiner {
+	display: block
+}
+
+.yya {
+	position: fixed;
+	left: 0;
+	background: rgba(255, 255, 255, .95);
+	box-shadow: 0 1px 40px -8px rgba(0, 0, 0, .5)
+}
+
+.gizle {
+	top: -100px;
+	top: 0;
+	z-index: 9999
+}
+
+.sabit {
+	top: 0;
+	z-index: 9999
+}
+
+
+.site-header:before,
+.site-header:after{
+    content: "";
+	display: table;
+	table-layout: fixed
+}
+
+.site-header:after{
+    clear: both
+}
+
+.site-header.iconsearch {
+	font-size: 18px;
+	font-size: 1.125rem;
+	position: relative;
+	z-index: 9998
+}
+
+.site-header.iconsearch:hover {
+	cursor: pointer;
+	color: #999
+}
+
+.site-top {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	padding: 0 20px
+}
+
+.site-top ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block
+}
+
+.site-top ul li {
+	float: left;
+	margin: 0 13px;
+	position: relative;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease
+}
+
+.site-top ul li a {
+	padding: 10px 0;
+	display: inline-block;
+	color: #666;
+	width: auto;
+    white-space: nowrap;
+}
+
+.site-top ul li a:hover {
+	color: orange
+}
+
+.site-top ul li a:after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -16px;
+	height: 6px;
+	background-color: #fe9600;
+	width: 100%;
+	max-width: 0;
+	transition: max-width .25s ease-in-out
+}
+
+.site-top ul li ul li a:after {
+	content: "";
+	display: none;
+	position: absolute;
+	bottom: -21px;
+	height: 6px;
+	background-color: #fe9600;
+	width: 100%;
+	max-width: 0;
+	transition: max-width .25s ease-in-out
+}
+
+.site-top ul li a:hover:after {
+	max-width: 100%
+}
+
+.site-branding {
+	-webkit-animation: sitetop 1s;
+	animation: sitetop 1s;
+}
+
+@-webkit-keyframes sitetop {
+	0% {
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes sitetop {
+	0% {
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.site-branding {
+	float: left;
+	position: relative;
+	height: 75px;
+	line-height: 75px;
+	margin-left: -6px
+}
+
+.site-title {
+	margin: 0
+}
+
+.site-title a {
+	color: #464646;
+	font-weight: 400
+}
+
+.site-title a:hover {
+	color: orange
+}
+
+.site-title img {
+	height: 40px;
+	margin-top: 17px;
+	opacity: .75;
+	transition: color .2s ease-out, border .2s ease-out, opacity .2s ease-out
+}
+
+.header-user-avatar {
+	position: relative;
+	float: right;
+	margin-left: 20px;
+	margin-top: 22px
+}
+
+.header-user-avatar img {
+	border-radius: 100%;
+	cursor: pointer;
+	height: 30px;
+}
+
+.header-user-avatar:hover .header-user-menu {
+	display: block
+}
+
+.header-user-menu {
+	position: absolute;
+	width: 110px;
+	right: -11px;
+	text-align: left;
+	background: 0 0;
+	top: 44px;
+	display: none;
+	overflow: hidden;
+	-webkit-animation: header-user-menu .4s;
+	animation: header-user-menu .4s;
+	box-shadow: 0 1px 40px -8px rgba(0, 0, 0, .5);
+	border-radius: 5px;
+	text-align: center
+}
+
+.header-user-menu:before {
+	content: "";
+	position: fixed;
+	top: 46px;
+	right: 25px;
+	margin-left: -10px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent #fff
+}
+
+.herder-user-name {
+	font-size: 12px;
+	background: #fff;
+	padding: 10px;
+	border-radius: 4px 4px 0 0
+}
+
+.herder-user-name-u {
+	font-weight: 700;
+	font-size: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	white-space: nowrap
+}
+
+.searchbox {
+	float: right;
+	height: 75px;
+	line-height: 75px;
+	margin-left: 20px
+}
+
+.searchbox,
+.site-top .lower,
+.header-user-avatar {
+	-webkit-animation: searchbox 1s;
+	animation: searchbox 1s;
+}
+
+@-webkit-keyframes header-user-menu {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px)
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
+
+@keyframes header-user-menu {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px)
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
+
+@-webkit-keyframes searchbox {
+	0% {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes searchbox {
+	0% {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+
+
+i.fa.fa-search.iconsearch {
+	color: #666;
+	cursor: pointer;
+	font-size: 26px;
+	transition: all .3s ease-in-out
+}
+
+i.fa.fa-search.iconsearch:hover{
+    color: #fe9600
+}
+
+#nprogress {
+	pointer-events: none;
+	z-index: 99999;
+	position: absolute
+}
+
+#nprogress .bar {
+	background: orange;
+	position: fixed;
+	z-index: 1031;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3px
+}
+
+#nprogress .peg {
+	display: block;
+	position: absolute;
+	right: 0;
+	width: 100px;
+	height: 100%;
+	box-shadow: 0 0 10px orange, 0 0 5px orange;
+	opacity: 1;
+	transform: rotate(3deg) translate(0px, -4px)
+}
+
+#nprogress .spinner {
+	display: block;
+	position: fixed;
+	z-index: 9999;
+	top: 27px;
+	right: 24px;
+	left: inherit;
+	width: auto;
+	height: auto;
+	margin: 0
+}
+
+#nprogress .spinner-icon {
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
+	border: solid 3px transparent;
+	border-top-color: orange;
+	border-left-color: orange;
+	border-radius: 50%;
+	-webkit-animation: nprogress-spinner .4s linear infinite;
+	animation: nprogress-spinner .4s linear infinite
+}
+
+.nprogress-custom-parent {
+	overflow: hidden;
+	position: relative
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+	position: absolute
+}
+
+@-webkit-keyframes nprogress-spinner {
+	0% {
+		-webkit-transform: rotate(0deg)
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg)
+	}
+}
+
+@keyframes nprogress-spinner {
+	0% {
+		transform: rotate(0deg)
+	}
+
+	100% {
+		transform: rotate(360deg)
+	}
 }
