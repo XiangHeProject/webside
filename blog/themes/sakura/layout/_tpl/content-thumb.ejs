@@ -1,0 +1,7 @@
+<% var post_index = 0; %> 
+
+<% page.posts.each(function (post) { %>
+    <article class="post post-list-thumb <% if((post_index+1) % 2 == 0){ %>post-list-thumb-left<% } %> " itemscope="" itemtype="http://schema.org/BlogPosting">
+    </article>
+    <% post_index ++ %> 
+<% }) %> 

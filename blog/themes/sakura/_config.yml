@@ -16,9 +16,17 @@ index:
     - {class: "github", links: "https://github.com/XiangHeProject", tip: "GitHub"}
     - {class: "bilibili", links: "https://www.bilibili.com", tip: "BiliBili"}
     - {class: "zhihu", links: "https://www.zhihu.com", tip: "zhihu"}
-    
+
+notice:
+  enable: true
+  text: "2021/11/28: 开学了就先搞成这样等后续有时间继续完善"
+
 nav:
   top_search: true
+  shownav: true
+  menu:
+    - {key: "首页", link: "/", icon: "fa-fort-awesome faa-horizontal"}
+    - {key: "归档", link: "/archives", icon: "fa-archive faa-shake"}
 
 footer:
   content: '

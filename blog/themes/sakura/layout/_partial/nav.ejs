@@ -22,5 +22,31 @@
         <% if(theme.nav.top_search){%>
             <div class="searchbox"><i class="fa fa-search iconsearch icon-search"></i></div>
         <% } %> 
+        <div class="lower-cantiner">
+            <div class="lower">
+                <% if(theme.nav.shownav = 'false'){ %>
+                    <div id="show-nav" class="showNav mobile-fit">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                    </div>
+                <% } %>
+                <nav class='navbar'>
+                    <ul id="menu-menu-1" class="menu">
+                        <% for(const each of theme.nav.menu || []) { %>
+                        <% if (!each.key) continue; %>
+                        <li>
+                            <a href=<%= each.link %>  target="_self">
+                                <span class="faa-parent animated-hover">
+                                        <i class="fa <%= each.icon %> " aria-hidden="true"></i>
+                                    <%= each.key %>
+                                </span>
+                            </a>
+                        </li>
+                        <% } %> 
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
 </nav>

@@ -34,18 +34,21 @@
     </div>
 </header>
 
-<div id="content">
-    <% site.posts.forEach(function(post){ %>
-        <%- post.path %>
-        <br />
-        <%- post.slug %>
-        <br />
-        <%- post._id %>
-        <br />
-        <%- post.title %>
-        <br />
-        <%- post.date %>
-        <br />
-        <a href="/<%- post.path %>"><%- post.title %></a>
-    <% }); %>
+<div id="content" class="site-content">
+    <% if(theme.notice.enable == true) { %> 
+        <div class="notice" style="margin-top: 20px;">
+		<i class="fa fa-bullhorn"></i>
+		<div class="notice-content"><%= theme.notice.text %></div>
+	</div>
+    <% } %> 
+
+    <div id="primary" class="content-area">
+        <div id="main" class="site-main" role="main">
+            <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
+                <i class="fa fa-envira" aria-hidden="true"></i>
+                <span class="i18n" data-iname="home.discovery"> 发现 </span>
+            </h1>
+            <%- partial('_tpl/content-thumb') %> 
+        </div>
+    </div>
 </div>
