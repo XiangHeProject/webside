@@ -21,8 +21,64 @@
     </div>
 </footer>
 
+<button class="m-cd-top" title="Go to top">
+	<i class="fa fa-chevron-up" aria-hidden="true"></i>
+</button>
 
-<
+<div class="openNav">
+	<div class="iconflat">
+		<div class="icon"></div>
+	</div>
+	<div class="site-branding">
+		<% if(theme.blog_logo && theme.blog_logo != '') {%>
+			<div class="site-title">
+				<a href="${blog_url!}">
+					<img src=<%- url_for(theme.blog_logo) %>>
+				</a>
+			</div>
+		<% } else {%>
+			<h1 class="site-title"><a href="/"><%= theme.blog_title %></a></h1>
+		<% } %>
+	</div>
+</div>
+
+<div id="mo-nav">
+	<div class="m-avatar">
+		<img src=<%- gravatar(theme.email_address) %>>
+	</div>
+
+	<% if(theme.glitch_text) {%>
+		<p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px"><%= theme.glitch_text %></p>
+	<% } %>
+	<p style="display:flex; justify-content:center;">
+		<% for(const each of theme.index.social_icon || []) { %> 
+			<% if (!each.class) continue; %>
+				<a href="<%= each.links %>" title="<%= each.tip %> ">
+					<img src="/img/sns/<%= each.class %>.png" width="18">
+				</a>
+		<% } %> 
+	</p>
+	<div class="m-search">
+		<form class="m-search-form" method="get" action="/search" role="search">
+			<input class="m-search-input" type="search" name="keyword" placeholder="搜索..." required>
+		</form>
+	</div>
+	<ul id="menu-menu-1" class="menu">
+		<% for(const each of theme.nav.menu || []) { %>
+		<% if (!each.key) continue; %>
+		<li>
+			<a href=<%= each.link %>  target="_self">
+				<span class="faa-parent animated-hover">
+						<i class="fa <%= each.icon %> " aria-hidden="true"></i>
+					<%= each.key %>
+				</span>
+			</a>
+		</li>
+		<% } %> 
+	</ul>
+	<p class="m-footer">© <%- date(Date.now(), 'YYYY') %> <%= theme.nickname %> </p>
+</div>
+
 <%- js_ex(theme.static_prefix.nprogress, 'nprogress.min.js') %>
 <script src="/js/img-lazyload.js"></script>
 <script src="/js/boot.js"></script>

@@ -42,6 +42,8 @@ footer:
     “人不能一个人活下去，不需要任何人的孤独和需要人但得不到的孤独是不一样的。”
   '
 
+glitch_text: "Hello the World!"
+
 lazyload:
   enable: true
   loading_img: /img/loading.gif
