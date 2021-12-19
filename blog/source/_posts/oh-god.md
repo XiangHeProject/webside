@@ -2,6 +2,8 @@
 title: oh-god
 date: 2021-11-28 13:58:47
 tags:
+banner_img: /img/1.png
+index_img: /img/2.png
 ---
 # introduction
 整个项目的总括部分

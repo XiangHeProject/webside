@@ -12,6 +12,12 @@ index:
   banner_mask_alpha: 0.3
   grid_text: Hi,Xianghe!
   subtitle: You got to put the past behind you before you can move on.
+  post_url_target: _self
+  post_sticky:
+    enable: true
+    icon: 'iconfont icon-top'
+  auto_excerpt:
+    enable: true
   social_icon:
     - {class: "github", links: "https://github.com/XiangHeProject", tip: "GitHub"}
     - {class: "bilibili", links: "https://www.bilibili.com", tip: "BiliBili"}
@@ -28,10 +34,19 @@ nav:
     - {key: "首页", link: "/", icon: "fa-fort-awesome faa-horizontal"}
     - {key: "归档", link: "/archives", icon: "fa-archive faa-shake"}
 
+post:
+  default_index_img: /img/3.png
+
 footer:
   content: '
     “人不能一个人活下去，不需要任何人的孤独和需要人但得不到的孤独是不一样的。”
   '
+
+lazyload:
+  enable: true
+  loading_img: /img/loading.gif
+  onlypost: false
+  offset_factor: 2
 
 static_prefix:
   nprogress: https://cdn.jsdelivr.net/npm/nprogress@0.2.0/

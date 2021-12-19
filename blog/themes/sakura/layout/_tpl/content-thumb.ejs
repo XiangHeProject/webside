@@ -2,6 +2,39 @@
 
 <% page.posts.each(function (post) { %>
     <article class="post post-list-thumb <% if((post_index+1) % 2 == 0){ %>post-list-thumb-left<% } %> " itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="post-thumb">
+            <% var post_url = url_for(post.path), index_img = post.index_img || theme.post.default_index_img %>
+            <% if(index_img) { %>
+                <a href="<%- post_url %>"" target="<%- theme.index.post_url_target %>">
+                    <img src="<%- url_for(index_img) %>" alt="<%= post.title %>">
+                </a>
+            <% } %>
+        </div>
+        <div class="post-content-wrap">
+            <div class="post-content">
+                <div class="post-date">
+                    <i class="fa fa-clock-o"></i><span>发布于<%- date(post.date, config.date_format) %></span>
+                    <% if (theme.index.post_sticky && theme.index.post_sticky.enable && post.sticky > 0) { %>
+                        <i class="fa fa-fire hotpost"></i>
+                    <% } %>
+                </div>
+                <a href="<%- post_url %>" class="post-title"><h3><%= post.title %></h3></a>
+            </div>
+            <div class="float-content">
+				<p>
+                    <% var excerpt = '' %>
+                    <% if(post.excerpt) { %>
+                        <% excerpt = strip_html(post.excerpt).substr(0, 125) %>
+                    <% } else if(theme.index.auto_excerpt.enable){ %>
+                        <% excerpt = strip_html(post.content).substr(0, 125) %>
+                    <% } %>
+                    <%- excerpt %>
+                </p>
+				<div class="post-bottom">
+					<a href="<%- post_url %>" class="button-normal"><i class="fa fa-ellipsis-h"></i></a>
+				</div>
+			</div>
+        </div>
     </article>
     <% post_index ++ %> 
 <% }) %> 

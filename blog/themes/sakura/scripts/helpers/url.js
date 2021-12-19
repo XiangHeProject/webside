@@ -1,6 +1,6 @@
 'use strict';
 
-const joinPath = require('../utils/join-path');
+const joinPath = require('../utils/url-join');
 
 hexo.extend.helper.register('css_ex', function(base, relative, ex = '') {
   return `<link ${ex} rel="stylesheet" href="${this.url_for(joinPath(base, relative))}" />`;

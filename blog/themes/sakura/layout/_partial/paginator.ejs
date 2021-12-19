@@ -1,0 +1,14 @@
+<% if (page.total > 1){ %>
+    <nav aria-label="navigation" class="nav-bottom">
+      <span class="pagination" id="pagination">
+        <%- paginator({
+          prev_text: '<i class="fa fa-angle-left"></i>',
+          next_text: '<i class="fa fa-angle-right"></i>',
+          mid_size: 2,
+          end_size: 1,
+          format: `${config.pagination_dir}/%d/`,
+          escape: false
+        }) %>
+      </span>
+    </nav>
+  <% } %>
