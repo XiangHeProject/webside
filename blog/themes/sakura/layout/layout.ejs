@@ -5,22 +5,22 @@ var banner_img_height = page.banner_img_height || theme.index.banner_img_height
 var banner_mask_alpha = page.banner_mask_alpha || theme.index.banner_mask_alpha
 %>
 
-<!DOCTYPE html>
-<html lang="<%= config.language %>" >
+<% if(page.layout !== '404') { %>
+    <!DOCTYPE html>
+    <html lang="<%= config.language %>" >
 
-<%- partial('_partial/head') %> 
-<body class="serif">
-    <%- partial('_partial/nav') %> 
-    <main id="main-container">
-        <% if(is_post() || page.layout === '404') { %>
-            <%- body %>
-        <% } else { %>
+    <%- partial('_partial/head') %> 
+    <body class="serif">
+        <%- partial('_partial/nav') %> 
+        <main id="main-container">    
             <%- body %> 
-        <% } %>
-    </main>
-    <a href="#" class="cd-top"></a>
-</body>
+        </main>
+        <a href="#" class="cd-top"></a>
+    </body>
 
-<%- partial('_partial/footer') %>
+    <%- partial('_partial/footer') %>
 
 </html>
+<% } else { %>
+    <%- body %>
+<% } %> 

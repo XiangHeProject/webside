@@ -1,0 +1,34 @@
+<%
+page.layout = "404"
+page.lazyload = false
+%>
+
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>页面走丢啦|<%= config.title%></title>
+    <link rel='stylesheet' href='/css/main.css' type='text/css'/>
+</head>
+<body class="error404 hfeed">
+<section class="error-404 not-found">
+    <div class="error-img">
+        <img class="anim-icon" id="404" src="/img/404.jpg" style="height: 66%;"></div>
+    </div>
+    <div class="err-button back">
+        <a id="golast" href=javascript:history.go(-1); class="i18n" data-iname="notfound.golast">返回上一页</a>
+        <a id="gohome" href="/" class="i18n" data-iname="notfound.gohome">返回主页</a>
+    </div>
+    <p style="margin-bottom: 1em;margin-top: 1.5em;text-align: center;font-size: 15px;" class="i18n" data-iname="notfound.search">别急，试试站内搜索？</p>
+    <p style="margin-bottom: 1em;text-align: center;font-size: 15px;" class="i18n" data-iname="notfound.search_2">Don't worry, search in site?</p>
+    <div style="display:block; width:284px;margin: auto;">
+        <p style="margin-bottom: 1em;margin-top: 1.5em;text-align: center;font-size: 15px;"></p>
+        <form class="s-search" method="get" action="/search" role="search">
+            <i i class="fa fa-search iconsearch icon-search" style="bottom: 9px;left: 15px;"></i>
+            <input class="text-input i18n" style="padding: 8px 20px 8px 46px;" type="search" name="keyword" required data-iname="notfound.searchinput" data-iattr="placeholder" placeholder="Search...">	
+        </form>
+    </div>
+</section>
+</body>
+
+
