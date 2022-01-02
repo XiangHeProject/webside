@@ -1,0 +1,20 @@
+<section class="post-squares nextprev">
+	<% const prev = prev_post(page) %>
+    <% const next = next_post(page) %>
+    <% if (prev) { %>
+		<div class="post-nepre <% if (next) { %>half<% }else{ %>full<% } %> previous">
+			<a href="<%= url_for(prev.path) %>" rel="prev">
+				<div class="background" style="background-image:url('<%= prev.index_img %>');"></div>
+			    <span class="label"><%= __('post.pre')%></span><div class="info"><h3><%= prev.title %></h3><hr></div>
+			</a>
+		</div>
+    <% } %>
+    <% if (next) { %>
+	<div class="post-nepre <% if (prev) { %>half<% }else{ %>full<% } %> next">
+		<a href="<%= url_for(next.path) %>" rel="next">
+			<div class="background" style="background-image:url('<%= next.index_img %>');"></div>
+			<span class="label"><%= __('post.next')%></span><div class="info"><h3><%= next.title %></h3><hr></div>
+		</a>
+	</div>
+	<% } %>
+</section>

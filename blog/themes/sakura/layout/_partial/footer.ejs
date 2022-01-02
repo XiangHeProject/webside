@@ -80,5 +80,17 @@
 </div>
 
 <%- js_ex(theme.static_prefix.nprogress, 'nprogress.min.js') %>
+<%- js_ex(theme.static_prefix.tocbot, 'tocbot.min.js') %>
+<%- css_ex(theme.static_prefix.fancybox, 'jquery.fancybox.min.css') %>
+<%- js_ex(theme.static_prefix.fancybox, 'jquery.fancybox.min.js') %>
 <script src="/js/img-lazyload.js"></script>
 <script src="/js/boot.js"></script>
+
+
+<% if (theme.code.highlight.enable) { %>
+    <% var cssName %>
+    <% if (theme.code.highlight.lib === 'highlightjs') { %>
+      <% cssName = theme.code.highlight.highlightjs.style.toLowerCase().replace(/(?<!([0-9]))\s(?!([0-9]))/g, '-').replace(/\s/g, '') %>
+      <%- css_ex(theme.static_prefix.highlightjs, `/styles/${ cssName }.min.css`) %>
+    <% } %>
+<% } %>

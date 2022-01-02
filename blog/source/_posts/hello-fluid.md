@@ -2,6 +2,7 @@
 title: Hello Fluid
 date: 2020-04-22 22:22:22
 index_img: https://rmt.dogedoge.com/fetch/fluid/storage/hello-fluid/cover.png?w=480&fmt=webp
+banner_img: /img/2.png
 category: 主题示例
 tags:
   - 示例

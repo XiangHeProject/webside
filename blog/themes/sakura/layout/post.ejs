@@ -1,3 +1,38 @@
+<%
+if (!page.banner_img) {
+  page.banner_img = theme.post.banner_img
+}
+page.banner_img_height = theme.post.banner_img_height
+page.banner_mask_alpha = theme.post.banner_mask_alpha
+%>
+
+<div class="pattern-center-blank"></div>
+<div class="pattern-center single-center">
+  <div class="pattern-attachment-img">
+    <img src="<%- page.banner_img %> " onerror="imgError(this)">
+  </div>
+
+  <header class="pattern-header single-header">
+    <h1 class="entry-title"><%- page.title %></h1>
+    <p class="entry-census">
+      <span>
+        <a href="/">
+          <img src="<%- gravatar(theme.email_address)%>">
+        </a>
+      </span>
+      <span>
+        <a href="/"><%= theme.nickname %></a>
+      </span>
+      <span class="bull">·</span><%- date(page.updated, config.date_format) %>
+      <span class="bull">·</span><span>阅读量：100</span>
+    </p>
+  </header>
+</div>
 <div id="content" class="site-content">
-    <%- page.content %>
+    <div id="primary" class="content-area">
+        <div id="main" class="site-main" role="main">
+            <%- partial('_tpl/content-single') %>
+            <%- partial('_partial/post-nextprev') %>
+        </div>
+    </div>
 </div>

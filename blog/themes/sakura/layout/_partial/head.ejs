@@ -23,7 +23,7 @@ if (page.title) {
 	</script>
      <script id="sakura-config">
        var Sakura = window.Sakura || {};
-       var CONFIG = {"lazyload":{"offset_factor":<%= theme.lazyload.offset_factor%>}};
+       var CONFIG = {"lazyload":{"offset_factor":<%= theme.lazyload.offset_factor%>},"toc":{"collapseDepth":0}};
      </script>
      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="noexist" onload="this.media='all'">
@@ -32,6 +32,7 @@ if (page.title) {
      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
      <script src="/js/events.js"></script>
      <script src="/js/utils.js"></script>
+     <script src="/js/plugins.js"></script>
      <link rel="stylesheet" href="/css/main.css">
      <link rel="stylesheet" href="/css/lib.css">
 </head>

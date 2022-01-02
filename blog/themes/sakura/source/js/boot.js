@@ -11,7 +11,13 @@ Sakura.boot.registerEvents = function(){
     Sakura.events.MNH();
 };
 
+Sakura.boot.refresh = function() {
+    Sakura.plugins.TOC();
+    Sakura.plugins.wrapImageWithFancyBox();
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     Sakura.boot.registerEvents();
+    Sakura.boot.refresh();
     NProgress.configure({ showSpinner: false });
 });
